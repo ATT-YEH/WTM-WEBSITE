@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-Hant">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>WTM STUDIO </title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "secondary-container": "#00f1fe",
+                                                "on-error": "#690005",
+                                                "on-secondary": "#00363a",
+                                                "surface-container-lowest": "#0d0e10",
+                                                "primary-fixed-dim": "#e9c349",
+                                                "outline-variant": "#4d4635",
+                                                "surface-container-low": "#1b1c1e",
+                                                "on-secondary-fixed-variant": "#004f54",
+                                                "on-tertiary-container": "#6a00aa",
+                                                "primary-fixed": "#ffe088",
+                                                "surface-tint": "#e9c349",
+                                                "background": "#121315",
+                                                "tertiary-container": "#d49cff",
+                                                "error": "#ffb4ab",
+                                                "primary": "#f2ca50",
+                                                "on-primary": "#3c2f00",
+                                                "primary-container": "#d4af37",
+                                                "on-tertiary-fixed": "#2e004e",
+                                                "on-background": "#e3e2e5",
+                                                "error-container": "#93000a",
+                                                "on-primary-fixed": "#241a00",
+                                                "on-surface-variant": "#d0c5af",
+                                                "surface-variant": "#343537",
+                                                "on-primary-fixed-variant": "#574500",
+                                                "secondary": "#ddfcff",
+                                                "tertiary": "#e6c1ff",
+                                                "inverse-primary": "#735c00",
+                                                "surface": "#121315",
+                                                "surface-bright": "#38393b",
+                                                "on-error-container": "#ffdad6",
+                                                "on-secondary-fixed": "#002022",
+                                                "tertiary-fixed": "#f2daff",
+                                                "on-tertiary-fixed-variant": "#6c00ae",
+                                                "on-surface": "#e3e2e5",
+                                                "inverse-on-surface": "#303033",
+                                                "on-secondary-container": "#006a70",
+                                                "secondary-fixed": "#74f5ff",
+                                                "tertiary-fixed-dim": "#e1b6ff",
+                                                "surface-container-highest": "#343537",
+                                                "surface-dim": "#121315",
+                                                "inverse-surface": "#e3e2e5",
+                                                "outline": "#99907c",
+                                                "on-tertiary": "#4c007c",
+                                                "on-primary-container": "#554300",
+                                                "secondary-fixed-dim": "#00dbe7",
+                                                "surface-container": "#1f2022",
+                                                "surface-container-high": "#292a2c"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "fontFamily": {
+                                                "headline": ["Noto Serif TC", "serif"],
+                                                "body": ["Inter", "sans-serif"],
+                                                "label": ["Inter", "sans-serif"]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                body {
+                        font-family: 'Inter', sans-serif;
+                        background-color: #121315;
+                        color: #e3e2e5;
+                }
+
+                .font-serif-headline {
+                        font-family: 'Noto Serif TC', serif;
+                }
+
+                .material-symbols-outlined {
+                        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                }
+
+                .glass-panel {
+                        backdrop-filter: blur(24px);
+                        background: rgba(18, 19, 21, 0.6);
+                }
+
+                .metallic-gold {
+                        background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+                }
+        </style>
+</head>
+
+<body class="selection:bg-secondary-container selection:text-on-secondary-container">
+        <!-- TopNavBar -->
+        <nav
+                class="fixed top-0 w-full z-50 bg-[#121315]/60 backdrop-blur-xl shadow-2xl shadow-black/40 bg-gradient-to-b from-[#121315] to-transparent">
+                <div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+                        <div class="text-2xl font-bold tracking-tighter text-[#F2CA50] font-serif-headline">WTM
+                                STUDIO</div>
+                        <div class="hidden md:flex space-x-12 items-center">
+                                <a class="font-['Noto_Serif_TC'] tracking-[0.05em] leading-[1.4] text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 hover:scale-105"
+                                        href="#">Services</a>
+                                <a class="font-['Noto_Serif_TC'] tracking-[0.05em] leading-[1.4] text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 hover:scale-105"
+                                        href="#">Solutions</a>
+                                <a class="font-['Noto_Serif_TC'] tracking-[0.05em] leading-[1.4] text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 hover:scale-105"
+                                        href="portfolio.html">Artists</a>
+                                <a class="font-['Noto_Serif_TC'] tracking-[0.05em] leading-[1.4] text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 hover:scale-105"
+                                        href="#">Pricing</a>
+                                <a class="font-['Noto_Serif_TC'] tracking-[0.05em] leading-[1.4] text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 hover:scale-105"
+                                        href="#">FAQ</a>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                                <span
+                                        class="material-symbols-outlined text-[#F2CA50] cursor-pointer hover:scale-110 transition-transform">account_circle</span>
+                                <button
+                                        class="metallic-gold text-on-primary px-6 py-2 rounded-lg font-bold tracking-tight hover:scale-105 transition-all shadow-lg shadow-primary/20">Book
+                                        Session</button>
+                        </div>
+                </div>
+        </nav>
+        <!-- Hero Section -->
+        <header class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                        <div
+                                class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent z-10">
+                        </div>
+                        <img alt="High-end professional music production studio with glowing modular synthesizers and analog gear in dark lighting"
+                                class="w-full h-full object-cover opacity-40"
+                                data-alt="cinematic wide shot of a futuristic dark music studio with glowing blue and gold modular synthesizers and sleek minimalist furniture"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEKgz_aSEI3CDatlug1GMgy60AeYMr92spwRHFnLnTL0qvtPN5Xyc6aJkOXPs84vDSIwBvlam0WeKextvOEH17dLYau4dnj2BU6slecxXdMgjwvEIjWRsdjqpf6vHAT4d4EyQdwFUePOA1kaLCgL4tm1hUzHbdQJV4znOba-A-c9V0vJXKheDIjSdLdn1yMUPTba0iikt2yVhEcE0vttW0j8CsrdYY3hsTV2n1kGa-j2X7vuI3M-GKrbZ7Aoy7VeWreBT3pkvrSw" />
+                </div>
+                <div class="relative z-20 px-12 md:px-24 w-full">
+                        <div class="max-w-4xl">
+                                <h1
+                                        class="text-6xl md:text-8xl font-serif-headline font-black leading-[1.1] tracking-tight mb-8">
+                                        A higher standard in <br />
+                                        <span class="text-primary italic">Sonic Excellence.</span>
+                                </h1>
+                                <p
+                                        class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 font-light leading-relaxed">
+                                        音訊卓越的最高標準。為追求純粹聲音細節的創作者，打造最具權威性的數位音樂殿堂。
+                                </p>
+                                <div class="flex flex-col md:flex-row gap-6 mb-16">
+                                        <div class="relative max-w-md w-full">
+                                                <input class="w-full bg-surface-container-low border-b border-outline-variant py-4 px-6 focus:border-secondary-container outline-none transition-colors text-lg"
+                                                        placeholder="Enter your email" type="email" />
+                                        </div>
+                                        <button
+                                                class="metallic-gold text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-all">Get
+                                                Started</button>
+                                </div>
+                                <div
+                                        class="grid grid-cols-2 md:grid-cols-4 gap-12 border-t border-outline-variant/20 pt-12">
+                                        <div>
+                                                <div class="text-3xl font-serif-headline text-secondary-container">12k+
+                                                </div>
+                                                <div
+                                                        class="text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 font-label">
+                                                        Tracks Produced</div>
+                                        </div>
+                                        <div>
+                                                <div class="text-3xl font-serif-headline text-secondary-container">450
+                                                </div>
+                                                <div
+                                                        class="text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 font-label">
+                                                        Active Artists</div>
+                                        </div>
+                                        <div>
+                                                <div class="text-3xl font-serif-headline text-secondary-container">98%
+                                                </div>
+                                                <div
+                                                        class="text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 font-label">
+                                                        Client Retention</div>
+                                        </div>
+                                        <div>
+                                                <div class="text-3xl font-serif-headline text-secondary-container">24/7
+                                                </div>
+                                                <div
+                                                        class="text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 font-label">
+                                                        Remote Support</div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </header>
+        <!-- Social Proof -->
+        <section class="py-24 bg-surface-container-lowest overflow-hidden">
+                <div class="px-12 mb-12">
+                        <p class="text-[0.75rem] uppercase tracking-[0.2em] text-outline text-center">Trusted by
+                                Industry Leaders</p>
+                </div>
+                <div
+                        class="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                        <span class="text-2xl font-bold tracking-widest font-serif-headline">WARNER MUSIC</span>
+                        <span class="text-2xl font-bold tracking-widest font-serif-headline">SONY MUSIC</span>
+                        <span class="text-2xl font-bold tracking-widest font-serif-headline">UBISOFT</span>
+                        <span class="text-2xl font-bold tracking-widest font-serif-headline">A24 FILMS</span>
+                        <span class="text-2xl font-bold tracking-widest font-serif-headline">DISNEY+</span>
+                </div>
+        </section>
+        <!-- Who we're built for (Bento Grid Style) -->
+        <section class="py-32 px-12 max-w-[1920px] mx-auto">
+                <h2 class="text-4xl md:text-5xl font-serif-headline mb-24 text-center">Who we're built for</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-8 h-auto md:h-[600px]">
+                        <div
+                                class="md:col-span-2 md:row-span-2 group relative rounded-2xl overflow-hidden bg-surface-container-low p-12 flex flex-col justify-end transition-all hover:bg-surface-container-high">
+                                <div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+                                        <img alt="Energetic performance of an indie artist on a foggy stage with purple stage lights"
+                                                class="w-full h-full object-cover"
+                                                data-alt="atmospheric stage performance with purple neon lights and fog featuring a silhouette of an indie musician with a guitar"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCke6p9AVTE108_srpXmuyxBADbZ2JNG5Upf9qw1hq3ZYiT64Pb3kC56Rkj18CguxrWCOJG6YnNAB690blVVny_eL0CE7IV1imJjfrXb_UxpqowiDJoURXLdotWDqV7iST_TtbWipu3umFJ7CM01lNXSf07jxljkEVnDfpZ3IrNpZem-FVrY0oNWS3_2wuLJwL1RG23BetBSarKpEM_03qE36F6o8wHs0JCfYeBmIzOREr-2O7CZJ2zzEPboLqcuPkZ3UyVeNGOVw" />
+                                </div>
+                                <div class="relative z-10">
+                                        <span
+                                                class="text-secondary-container font-label text-[0.75rem] tracking-widest uppercase mb-4 block">Independent
+                                                Artists</span>
+                                        <h3 class="text-4xl font-serif-headline mb-4">獨立音樂人</h3>
+                                        <p class="text-on-surface-variant max-w-md">從臥室錄音到全球發行，我們提供與頂級唱片公司同級別的音訊後製技術。
+                                        </p>
+                                </div>
+                        </div>
+                        <div
+                                class="md:col-span-1 md:row-span-1 group relative rounded-2xl overflow-hidden bg-surface-container-low p-12 flex flex-col justify-end transition-all hover:bg-surface-container-high">
+                                <div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+                                        <img alt="Retro futuristic gaming setup with neon monitors and high-tech equipment"
+                                                class="w-full h-full object-cover"
+                                                data-alt="high-tech futuristic gaming console and workstation setup with vibrant cyan and magenta backlighting and sleek tech hardware"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxOzZSmoPoQraw9fxBjvmHd-1hCn639VU2zE-AA3ley9l94xj2TMGTWuR8XITaeJ15S01hJMRFXJ3O-tTh_H7VASP3mU5D59xPv_RyQC3XMpA0UZDYS_RjgYQHjQmehBapWbWIjMsek4GH3WMcOfh9PLh6DQ0pTa5DedlF4QXRssvo9Bpb1Ke-pxEd470x0OLJgtWDrZTtvetfeF_SD3fjhCzO9gblfAWdqB_AuKeWYQU-Swk6FkD-cOb-lon1miKqA4C27B5XVA" />
+                                </div>
+                                <div class="relative z-10">
+                                        <span
+                                                class="text-tertiary-container font-label text-[0.75rem] tracking-widest uppercase mb-4 block">Game
+                                                Devs</span>
+                                        <h3 class="text-3xl font-serif-headline mb-4">遊戲開發團隊</h3>
+                                        <p class="text-on-surface-variant">為沉浸式虛擬世界打造身歷其境的動態音效與配樂解決方案。</p>
+                                </div>
+                        </div>
+                        <div
+                                class="md:col-span-1 md:row-span-1 group relative rounded-2xl overflow-hidden bg-surface-container-low p-12 flex flex-col justify-end transition-all hover:bg-surface-container-high">
+                                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+                                        <div
+                                                class="w-full h-full bg-gradient-to-br from-primary-container/30 to-transparent">
+                                        </div>
+                                </div>
+                                <div class="relative z-10">
+                                        <span
+                                                class="text-primary-container font-label text-[0.75rem] tracking-widest uppercase mb-4 block">Film
+                                                Scoring</span>
+                                        <h3 class="text-3xl font-serif-headline mb-4">影視配樂</h3>
+                                        <p class="text-on-surface-variant">交響樂實錄與電子實驗音訊，完美契合大螢幕的視覺張力。</p>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Key Product Pillars -->
+        <section class="py-32 bg-surface-container-low relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+                        <span class="material-symbols-outlined text-[40rem] text-tertiary-container">graphic_eq</span>
+                </div>
+                <div class="px-12 max-w-[1920px] mx-auto">
+                        <div class="flex flex-col md:flex-row justify-between items-end mb-24">
+                                <div class="max-w-2xl">
+                                        <h2 class="text-5xl font-serif-headline mb-8">的核心服務支柱</h2>
+                                        <p class="text-xl text-on-surface-variant">We don't just process sound; we
+                                                sculpt frequencies into emotions. Our pillars of production redefine
+                                                digital audio standards.</p>
+                                </div>
+                                <div class="mt-8 md:mt-0">
+                                        <button
+                                                class="border border-outline px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-500">View
+                                                Full Menu</button>
+                                </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant/20">
+                                <!-- Card 1 -->
+                                <div
+                                        class="bg-surface p-12 hover:bg-surface-container-high transition-colors duration-500">
+                                        <span
+                                                class="material-symbols-outlined text-4xl text-primary mb-8">mic_external_on</span>
+                                        <h4 class="text-2xl font-serif-headline mb-6">Music Production</h4>
+                                        <p class="text-on-surface-variant mb-12">全方位的製作流程，從編曲、配器到人聲執導，賦予你的靈感最專業的實體。</p>
+                                        <ul class="space-y-4 text-sm font-label uppercase tracking-widest text-outline">
+                                                <li>• Multi-track Recording</li>
+                                                <li>• Vocal Arrangement</li>
+                                                <li>• Beat Sculpting</li>
+                                        </ul>
+                                </div>
+                                <!-- Card 2 -->
+                                <div
+                                        class="bg-surface p-12 hover:bg-surface-container-high transition-colors duration-500">
+                                        <span
+                                                class="material-symbols-outlined text-4xl text-secondary-container mb-8">equalizer</span>
+                                        <h4 class="text-2xl font-serif-headline mb-6">Mixing &amp; Mastering</h4>
+                                        <p class="text-on-surface-variant mb-12">利用傳奇硬體與數位演算法，確保你的音樂在任何播放設備上都具備極致的動態。
+                                        </p>
+                                        <ul class="space-y-4 text-sm font-label uppercase tracking-widest text-outline">
+                                                <li>• Analog Summing</li>
+                                                <li>• LUFS Optimization</li>
+                                                <li>• Stereo Enhancement</li>
+                                        </ul>
+                                </div>
+                                <!-- Card 3 -->
+                                <div
+                                        class="bg-surface p-12 hover:bg-surface-container-high transition-colors duration-500">
+                                        <span
+                                                class="material-symbols-outlined text-4xl text-tertiary-container mb-8">auto_awesome</span>
+                                        <h4 class="text-2xl font-serif-headline mb-6">Bespoke Composition</h4>
+                                        <p class="text-on-surface-variant mb-12">客製化原創配樂。為你的視覺影像、商業廣告或互動媒體打造獨特的聲音識別。</p>
+                                        <ul class="space-y-4 text-sm font-label uppercase tracking-widest text-outline">
+                                                <li>• Original Score</li>
+                                                <li>• SFX Design</li>
+                                                <li>• Branding Audio</li>
+                                        </ul>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Technical Capabilities -->
+        <section class="py-32 px-12 max-w-[1920px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                        <div>
+                                <span
+                                        class="text-secondary-container font-label text-sm tracking-[0.3em] uppercase mb-6 block">Technical
+                                        Prowess</span>
+                                <h2 class="text-5xl font-serif-headline mb-12 leading-tight">超越數位極限的<br />技術底蘊</h2>
+                                <div class="space-y-12">
+                                        <div class="flex gap-8">
+                                                <div
+                                                        class="w-12 h-12 rounded-full border border-secondary-container flex items-center justify-center shrink-0">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary-container">spatial_audio_off</span>
+                                                </div>
+                                                <div>
+                                                        <h5 class="text-xl font-bold mb-2 uppercase tracking-wide">Dolby
+                                                                Atmos® Certified</h5>
+                                                        <p class="text-on-surface-variant">提供沉浸式 7.1.4
+                                                                全景聲混音，讓聽眾置身於音場的核心，感受全方位的維度變化。</p>
+                                                </div>
+                                        </div>
+                                        <div class="flex gap-8">
+                                                <div
+                                                        class="w-12 h-12 rounded-full border border-secondary-container flex items-center justify-center shrink-0">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary-container">api</span>
+                                                </div>
+                                                <div>
+                                                        <h5 class="text-xl font-bold mb-2 uppercase tracking-wide">
+                                                                Remote Collaboration API</h5>
+                                                        <p class="text-on-surface-variant">
+                                                                零延遲的高保真遠端監聽技術，讓你在世界任何角落都能即時參與混音校正。</p>
+                                                </div>
+                                        </div>
+                                        <div class="flex gap-8">
+                                                <div
+                                                        class="w-12 h-12 rounded-full border border-secondary-container flex items-center justify-center shrink-0">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary-container">settings_input_component</span>
+                                                </div>
+                                                <div>
+                                                        <h5 class="text-xl font-bold mb-2 uppercase tracking-wide">
+                                                                Analog/Digital Hybrid</h5>
+                                                        <p class="text-on-surface-variant">Neve, SSL, Universal Audio
+                                                                等頂級類比線路，結合最前瞻的 DSP 數位處理技術。</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="relative group">
+                                <div
+                                        class="absolute -inset-4 bg-gradient-to-tr from-secondary-container/20 to-tertiary-container/20 rounded-2xl blur-2xl group-hover:opacity-100 opacity-50 transition-opacity">
+                                </div>
+                                <div
+                                        class="relative bg-surface-container-high rounded-2xl overflow-hidden aspect-square">
+                                        <img alt="Extreme close-up of high-quality professional audio mixing console sliders and knobs in low light"
+                                                class="w-full h-full object-cover mix-blend-overlay opacity-60"
+                                                data-alt="detailed close-up of a professional mixing console with metallic sliders and glowing LEDs in a dark studio setting"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLVr8UTtvwMZp84O5khzBKj4fmeUGUY7KZOzGjSTv33WhGsdDt0XRxZjdlwsqngIyEgrfFOm4z9y0ufL5rHsiS6A1VndzietpfBQzQTn9IuSfCz8SCKf1N7r6ViRERS1NtqR9ZszkiQOdNBMEaTPNyOKAbyPNHlNoClH9k2MVmsXUyKfznbBNcGs2V3gfk-9zVBmzUB0uRdK_hjpWdUFfBLaxP5ElTYcJ_30fcDwCmKgwgc_H_BUr3TgbBMoJOr5lio2bgfDrzpA" />
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                                <div class="flex gap-2">
+                                                        <div class="w-1 h-12 bg-secondary-container animate-pulse">
+                                                        </div>
+                                                        <div
+                                                                class="w-1 h-20 bg-secondary-container animate-pulse delay-75">
+                                                        </div>
+                                                        <div
+                                                                class="w-1 h-32 bg-secondary-container animate-pulse delay-150">
+                                                        </div>
+                                                        <div
+                                                                class="w-1 h-16 bg-secondary-container animate-pulse delay-300">
+                                                        </div>
+                                                        <div
+                                                                class="w-1 h-24 bg-secondary-container animate-pulse delay-500">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Scale & Performance -->
+        <section class="py-32 bg-[#121315]">
+                <div class="px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-24">
+                        <div class="text-center">
+                                <div class="text-7xl font-serif-headline text-primary mb-4">99.9%</div>
+                                <div class="text-sm font-label uppercase tracking-[0.2em] text-outline-variant">Uptime
+                                        Guarantee</div>
+                                <p class="mt-6 text-on-surface-variant px-12">我們的雲端音訊架構確保您的專案隨時隨地都能穩定存取與渲染。</p>
+                        </div>
+                        <div class="text-center">
+                                <div class="text-7xl font-serif-headline text-primary mb-4">32-Bit</div>
+                                <div class="text-sm font-label uppercase tracking-[0.2em] text-outline-variant">Audio
+                                        Resolution</div>
+                                <p class="mt-6 text-on-surface-variant px-12">提供業界最高規格的浮點運算處理，拒絕任何數位失真與採樣損耗。</p>
+                        </div>
+                        <div class="text-center">
+                                <div class="text-7xl font-serif-headline text-primary mb-4">0ms</div>
+                                <div class="text-sm font-label uppercase tracking-[0.2em] text-outline-variant">Latent
+                                        Monitoring</div>
+                                <p class="mt-6 text-on-surface-variant px-12">自研的高速驅動技術，為錄音室提供絕對同步的實時回饋體驗。</p>
+                        </div>
+                </div>
+        </section>
+        <!-- Pricing (Editorial Layout) -->
+        <section class="py-32 px-12 bg-surface-container-lowest">
+                <div class="max-w-7xl mx-auto">
+                        <h2 class="text-5xl font-serif-headline mb-24 text-center">透明化的專業定價</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                                <!-- Plan 1 -->
+                                <div
+                                        class="border border-outline-variant/30 p-10 rounded-xl hover:border-primary transition-all group">
+                                        <span
+                                                class="text-sm font-label uppercase tracking-widest text-outline block mb-4">Single
+                                                Track</span>
+                                        <h3 class="text-3xl font-serif-headline mb-2">Essential Mix</h3>
+                                        <div class="text-4xl font-serif-headline text-primary mb-12">$350<span
+                                                        class="text-lg text-outline">/track</span></div>
+                                        <ul class="space-y-6 mb-12 text-on-surface-variant">
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Pro Stereo Mixing</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        3 Revisions</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Mastering Included</li>
+                                        </ul>
+                                        <button
+                                                class="w-full border border-outline-variant py-4 group-hover:bg-primary group-hover:text-on-primary transition-all font-bold">Select
+                                                Plan</button>
+                                </div>
+                                <!-- Plan 2 -->
+                                <div
+                                        class="border-2 border-primary p-10 rounded-xl relative overflow-hidden bg-surface-container-low">
+                                        <div
+                                                class="absolute top-0 right-0 bg-primary text-on-primary text-[0.65rem] font-bold px-6 py-1 uppercase tracking-tighter">
+                                                Most Popular</div>
+                                        <span
+                                                class="text-sm font-label uppercase tracking-widest text-primary block mb-4">Full
+                                                EP / Album</span>
+                                        <h3 class="text-3xl font-serif-headline mb-2">WTM STUDIO</h3>
+                                        <div class="text-4xl font-serif-headline text-primary mb-12">$2,400<span
+                                                        class="text-lg text-outline">/8 tracks</span></div>
+                                        <ul class="space-y-6 mb-12 text-on-surface-variant">
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Production &amp; Arrangement</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Dolby Atmos® Mix</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Priority Support</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Stems Delivery</li>
+                                        </ul>
+                                        <button
+                                                class="w-full metallic-gold text-on-primary py-4 transition-all font-bold hover:scale-105">Book
+                                                Album Session</button>
+                                </div>
+                                <!-- Plan 3 -->
+                                <div
+                                        class="border border-outline-variant/30 p-10 rounded-xl hover:border-primary transition-all group">
+                                        <span
+                                                class="text-sm font-label uppercase tracking-widest text-outline block mb-4">Enterprise
+                                                / Game</span>
+                                        <h3 class="text-3xl font-serif-headline mb-2">Bespoke Enterprise</h3>
+                                        <div class="text-4xl font-serif-headline text-primary mb-12">Custom</div>
+                                        <ul class="space-y-6 mb-12 text-on-surface-variant">
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Unlimited Revisions</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Sound Design Library</li>
+                                                <li class="flex items-center gap-3"><span
+                                                                class="material-symbols-outlined text-sm text-secondary-container">check_circle</span>
+                                                        Dedicated Project Lead</li>
+                                        </ul>
+                                        <button
+                                                class="w-full border border-outline-variant py-4 group-hover:bg-primary group-hover:text-on-primary transition-all font-bold">Contact
+                                                Sales</button>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- FAQ -->
+        <section class="py-32 px-12 max-w-4xl mx-auto">
+                <h2 class="text-4xl font-serif-headline mb-16 text-center">常見問題 FAQ</h2>
+                <div class="space-y-4">
+                        <div class="bg-surface-container-low p-6 rounded-lg">
+                                <h4 class="text-xl font-bold flex justify-between items-center cursor-pointer">
+                                        如何開始一個新的錄音專案？
+                                        <span class="material-symbols-outlined">expand_more</span>
+                                </h4>
+                                <p class="mt-4 text-on-surface-variant">點擊右上角的 "Book Session"，填寫您的專案需求與預算，我們的音訊顧問將在 24
+                                        小時內與您聯繫並安排線上會議。</p>
+                        </div>
+                        <div class="bg-surface-container-low p-6 rounded-lg">
+                                <h4 class="text-xl font-bold flex justify-between items-center cursor-pointer">
+                                        是否提供遠端監聽與校正？
+                                        <span class="material-symbols-outlined">expand_more</span>
+                                </h4>
+                                <p class="mt-4 text-on-surface-variant">是的，我們使用自研的 StreamCast
+                                        技術，提供無損音質的遠端即時監聽服務，讓您在家也能享有錄音室等級的試聽體驗。</p>
+                        </div>
+                        <div class="bg-surface-container-low p-6 rounded-lg">
+                                <h4 class="text-xl font-bold flex justify-between items-center cursor-pointer">
+                                        專案的交付格式為何？
+                                        <span class="material-symbols-outlined">expand_more</span>
+                                </h4>
+                                <p class="mt-4 text-on-surface-variant">標準交付包含 24-bit/96kHz WAV 檔案。若選購特定方案，亦可提供全軌道分軌
+                                        (Stems) 與 Dolby Atmos 混音文件。</p>
+                        </div>
+                </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-[#121315] w-full border-t border-[#4D4635]/15">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-[1920px] mx-auto">
+                        <div class="space-y-6">
+                                <div class="text-lg font-serif text-[#F2CA50]">WTM STUDIO</div>
+                                <p class="text-[0.75rem] text-gray-500 uppercase tracking-widest leading-relaxed">
+                                        Sculpting the future of sound through relentless precision and digital
+                                        brutality.
+                                </p>
+                        </div>
+                        <div>
+                                <h5 class="font-bold mb-8 text-sm tracking-[0.2em] uppercase">Quick Links</h5>
+                                <ul class="space-y-4">
+                                        <li><a class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 hover:text-white transition-colors"
+                                                        href="#">Sitemap</a></li>
+                                        <li><a class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 hover:text-white transition-colors"
+                                                        href="#">Legal</a></li>
+                                        <li><a class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 hover:text-white transition-colors"
+                                                        href="#">Privacy Policy</a></li>
+                                </ul>
+                        </div>
+                        <div>
+                                <h5 class="font-bold mb-8 text-sm tracking-[0.2em] uppercase">Social</h5>
+                                <ul class="space-y-4">
+                                        <li><a class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 hover:text-[#D49CFF] transition-colors duration-300"
+                                                        href="#">SoundCloud</a></li>
+                                        <li><a class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 hover:text-[#D49CFF] transition-colors duration-300"
+                                                        href="#">Spotify</a></li>
+                                        <li><a class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500 hover:text-[#D49CFF] transition-colors duration-300"
+                                                        href="#">Instagram</a></li>
+                                </ul>
+                        </div>
+                        <div>
+                                <h5 class="font-bold mb-8 text-sm tracking-[0.2em] uppercase">Newsletter</h5>
+                                <p class="text-[0.75rem] text-gray-500 uppercase mb-6">Stay updated with sonic news.</p>
+                                <div class="flex gap-2">
+                                        <input class="bg-surface-container-high border-none text-[0.75rem] p-3 w-full focus:ring-1 focus:ring-primary"
+                                                placeholder="EMAIL ADDRESS" type="email" />
+                                        <button class="bg-primary px-4 text-on-primary">
+                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                        </button>
+                                </div>
+                        </div>
+                </div>
+                <div class="px-12 py-8 border-t border-outline-variant/10 text-center">
+                        <p class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500">
+                                © 2024 WTM STUDIO. ALL RIGHTS RESERVED.
+                        </p>
+                </div>
+        </footer>
+</body>
+
+</html>

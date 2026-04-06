@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WTM STUDIO | Artist-Focused Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Noto+Serif+TC:wght@600;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#00f1fe",
+                    "on-error": "#690005",
+                    "on-secondary": "#00363a",
+                    "surface-container-lowest": "#0d0e10",
+                    "primary-fixed-dim": "#e9c349",
+                    "outline-variant": "#4d4635",
+                    "surface-container-low": "#1b1c1e",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "on-tertiary-container": "#6a00aa",
+                    "primary-fixed": "#ffe088",
+                    "surface-tint": "#e9c349",
+                    "background": "#121315",
+                    "tertiary-container": "#d49cff",
+                    "error": "#ffb4ab",
+                    "primary": "#f2ca50",
+                    "on-primary": "#3c2f00",
+                    "primary-container": "#d4af37",
+                    "on-tertiary-fixed": "#2e004e",
+                    "on-background": "#e3e2e5",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-variant": "#343537",
+                    "on-primary-fixed-variant": "#574500",
+                    "secondary": "#ddfcff",
+                    "tertiary": "#e6c1ff",
+                    "inverse-primary": "#735c00",
+                    "surface": "#121315",
+                    "surface-bright": "#38393b",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002022",
+                    "tertiary-fixed": "#f2daff",
+                    "on-tertiary-fixed-variant": "#6c00ae",
+                    "on-surface": "#e3e2e5",
+                    "inverse-on-surface": "#303033",
+                    "on-secondary-container": "#006a70",
+                    "secondary-fixed": "#74f5ff",
+                    "tertiary-fixed-dim": "#e1b6ff",
+                    "surface-container-highest": "#343537",
+                    "surface-dim": "#121315",
+                    "inverse-surface": "#e3e2e5",
+                    "outline": "#99907c",
+                    "on-tertiary": "#4c007c",
+                    "on-primary-container": "#554300",
+                    "secondary-fixed-dim": "#00dbe7",
+                    "surface-container": "#1f2022",
+                    "surface-container-high": "#292a2c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif TC"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #121315;
+            color: #e3e2e5;
+            font-family: 'Inter', sans-serif;
+        }
+        .text-glow-primary {
+            text-shadow: 0 0 15px rgba(242, 202, 80, 0.3);
+        }
+        .glass-panel {
+            background: rgba(18, 19, 21, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        .metallic-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#121315]/60 backdrop-blur-xl bg-gradient-to-b from-[#121315] to-transparent shadow-2xl shadow-black/40">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#F2CA50]">WTM STUDIO</div>
+<div class="hidden md:flex items-center gap-12 font-['Noto_Serif_TC'] tracking-[0.05em] leading-[1.4]">
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300" href="#">Services</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300" href="#">Solutions</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300" href="#">Artists</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300" href="#">Pricing</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300" href="#">FAQ</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#F2CA50] cursor-pointer hover:scale-110 transition-transform">account_circle</span>
+<button class="metallic-gradient px-8 py-2.5 rounded-full text-on-primary font-bold text-sm hover:scale-105 transition-all duration-500 shadow-lg shadow-primary/20">Book Session</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="dramatic wide shot of a futuristic recording studio with gold acoustic panels and dim violet ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWAxNHfaZK1epOL45gawX2wwjxkpvQRlXaYTOIXnV5hQN0x1rarPvRKUB5v5y0X62kEAA9pXWV78IVuU1Lu9PguyHadVf4pbLEp3LwOrhVZ-mf1zofDkSIn4tJ_OFZpS9LmmgHX4308LWFR7s1kBODRh2e57j_JR6xjRTNISUzJVu0BI7UL4CIDna_jQsvnq_k8_0BQyj3jdkDISCtsyjG5Y90gSQXbY6lAldAAyOB3Rej_4TCaWcCE4GH_4QyAh4GLAjOFEIedQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<p class="text-secondary tracking-[0.4em] uppercase text-xs mb-8 font-label">The Digital Curator</p>
+<h1 class="font-headline text-[clamp(3.5rem,10vw,7rem)] leading-tight mb-8 text-glow-primary tracking-tight">
+                A Higher Standard in <br/>
+<span class="italic text-primary-container">Sonic Excellence.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto font-body leading-relaxed mb-12">
+                為藝術家量身打造的聲學聖殿。我們將技術精準度與藝術靈魂完美融合，策劃您專屬的聲音傳奇。
+            </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="metallic-gradient px-12 py-5 rounded-full text-on-primary font-bold tracking-widest text-base hover:scale-105 transition-all duration-500">START CREATING</button>
+<button class="border border-outline-variant/30 px-12 py-5 rounded-full text-on-surface font-bold tracking-widest text-base hover:bg-surface-variant transition-all duration-500">PORTFOLIO 作品集</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-12 flex gap-4 items-center">
+<div class="w-12 h-[1px] bg-primary"></div>
+<span class="text-xs font-label tracking-[0.2em] text-primary">SCROLL TO EXPLORE</span>
+</div>
+</section>
+<!-- Artist Philosophy Bento -->
+<section class="py-32 px-12 max-w-[1920px] mx-auto bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto md:h-[800px]">
+<!-- Main Feature -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="close up of a professional microphone in a dark moody studio with a musician in soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGDScx-rjqg-arePyc0jv6nvcYax87JN8rlSJyptnySLlqamnRuUeU8dw5ji5869WBpsFVPllgZOHhzvS4vsGONDXc8nw1gbXh_qwERx7f47k4LAjhqmJozXFfBTC_isM4fTG09Qp1i1fQmQnyqXhv_JAzzlIuyvmBVn1eQ6TeUtalfOpAHkE5GRPGKOZNaR_tDfHypKHPA1g3TFBQi3uCYHpd8Ihu-Q2Xy0blYHLeBD5dmtfKXLMxPUhvnp0CDVT7vPacZtQNjg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent"></div>
+<div class="relative h-full p-16 flex flex-col justify-end">
+<h2 class="font-headline text-5xl mb-6 leading-tight">情感的精確度<br/><span class="text-secondary">Emotional Precision</span></h2>
+<p class="text-on-surface-variant max-w-md font-body leading-relaxed">
+                        我們不只是錄製聲音；我們捕捉轉瞬即逝的火花。每一分貝的波動都經過深思熟慮，確保您的藝術呈現最真實的厚度。
+                    </p>
+</div>
+</div>
+<!-- Side Bento 1 -->
+<div class="md:col-span-4 grid grid-rows-2 gap-8">
+<div class="bg-surface-container-high p-12 rounded-xl flex flex-col justify-between border-b-2 border-primary/20">
+<span class="material-symbols-outlined text-4xl text-primary">surround_sound</span>
+<div>
+<h3 class="font-headline text-2xl mb-4">杜比全景聲</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Dolby Atmos Immersive Audio for a boundary-breaking listening experience.</p>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30" data-alt="abstract digital sound waves visualization in neon blue and violet against a black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCUxM_2whDgVxbebBDhaSDqyGjFiD--5bxEhlYCWW4bB16k01GbhK6bUrvRoTL5I1wY5bP_sR-2Llbsu7vy8cxkSP_xSk-mkWh4Ro9rhHBx8CpnIJshhwKrr-9ymnfLpS1_Q4eqMHDmwspzaZb51rSyk4OLbH11UFF1wXH2pWQJxKYlL2u8z5UhzC4Xgr96TUCoeiAJLcmI4FDz7n_xUPAMUukVh6l5MGTSm9LxIa5SsBZaGO-NWGsxjIm_k2DE53n-CRNH08OpA"/>
+<div class="relative h-full p-12 flex flex-col justify-center items-center text-center">
+<h3 class="font-label text-4xl font-bold text-secondary-container">24-BIT</h3>
+<p class="text-xs tracking-[0.2em] mt-2">STUDIO MASTERING</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services: Curated Solutions -->
+<section class="py-32 px-12 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-outline-variant/10 pb-12">
+<div class="max-w-2xl">
+<span class="text-primary font-label tracking-[0.2em] text-xs">SERVICES</span>
+<h2 class="font-headline text-6xl mt-4">專業策劃方案</h2>
+<p class="text-on-surface-variant mt-8 font-body leading-relaxed">
+                    從初期的創意發想到最後的母帶後期處理，我們提供全方位的音頻工程服務，將您的願景轉化為聲學傳奇。
+                </p>
+</div>
+<button class="text-secondary font-label tracking-widest hover:translate-x-4 transition-transform duration-500">VIEW ALL SERVICES →</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-8">
+<span class="text-5xl font-headline text-outline-variant/30">01</span>
+<h3 class="text-3xl font-headline border-l-4 border-primary pl-6">Music Production</h3>
+<p class="text-on-surface-variant leading-relaxed">音樂製作：協助編曲、樂器錄製與整體聲響架構。我們與您並肩作戰，挖掘作品的靈魂。</p>
+</div>
+<div class="space-y-8">
+<span class="text-5xl font-headline text-outline-variant/30">02</span>
+<h3 class="text-3xl font-headline border-l-4 border-secondary pl-6">Mixing &amp; Mastering</h3>
+<p class="text-on-surface-variant leading-relaxed">混音與母帶：透過類比器材與尖端數位插件的完美結合，打造清晰、寬廣且具衝擊力的音場。</p>
+</div>
+<div class="space-y-8">
+<span class="text-5xl font-headline text-outline-variant/30">03</span>
+<h3 class="text-3xl font-headline border-l-4 border-tertiary pl-6">Sound Design</h3>
+<p class="text-on-surface-variant leading-relaxed">聲音設計：為影像、遊戲或數位藝術打造獨特的環境音與特效，創造沈浸式的感官旅程。</p>
+</div>
+</div>
+</section>
+<!-- Featured Artist Showcase -->
+<section class="relative py-32 overflow-hidden bg-surface-container-low">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-64 bg-gradient-to-b from-primary to-transparent opacity-30"></div>
+<div class="max-w-[1920px] mx-auto px-12 grid grid-cols-1 md:grid-cols-2 items-center gap-24">
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="moody editorial portrait of a young electronic music artist wearing headphones in a studio with purple neon backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGEQX29SKiN4EielMC6mU2mblyd_oomY__ibqigq67cu5a9858SI7TE2iWdM3PyNvjqvc3vdUpm07gcKDTD7drbagZ30rN1KaSW1rC4nFLlUHYfsgukgvZvFR2F54hRZVeT4R0Mb5Zk-rD2q1BX7atPxYppiAGWQnb7aDC7HQidZC8btr6M0fS6gfAKTav0yBduLx_9e95msuBFiitCyW-VAdZMCZZuWFS_vFWx0ycW7TyPmZ72k6IMRpyq_zfejnGjzkhXiBbOA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<p class="font-label text-xs tracking-widest text-primary">FEATURED ARTIST</p>
+<h4 class="font-headline text-4xl">LUNA VOID</h4>
+</div>
+</div>
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline text-5xl">靈感與工具的共鳴</h2>
+<p class="text-lg text-on-surface-variant font-body leading-loose italic">
+                        "In WTM STUDIO, I found more than just a studio. I found a partner who understands the silence between the notes as much as the notes themselves."
+                    </p>
+</div>
+<div class="flex items-center gap-12">
+<div>
+<p class="text-primary font-bold text-3xl font-headline">124+</p>
+<p class="text-xs font-label text-on-surface-variant mt-2 uppercase tracking-tighter">Tracks Released</p>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div>
+<p class="text-secondary font-bold text-3xl font-headline">12</p>
+<p class="text-xs font-label text-on-surface-variant mt-2 uppercase tracking-tighter">Global Awards</p>
+</div>
+</div>
+<button class="group flex items-center gap-4 text-primary font-label text-sm tracking-widest">
+                    EXPLORE THE COLLABORATION
+                    <span class="w-8 h-px bg-primary group-hover:w-16 transition-all duration-500"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Pricing / Booking Tiers -->
+<section class="py-32 px-12 bg-surface">
+<div class="text-center mb-24">
+<h2 class="font-headline text-5xl mb-4">選擇您的藝術航道</h2>
+<p class="text-on-surface-variant font-body">Transparent pricing for premium results.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+<!-- Tier 1 -->
+<div class="bg-surface-container p-12 rounded-2xl border border-outline-variant/10 hover:border-primary/40 transition-colors duration-500 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl mb-8">Single Sculpt</h3>
+<div class="flex items-baseline gap-2 mb-12">
+<span class="text-4xl font-headline text-primary">$499</span>
+<span class="text-sm text-on-surface-variant">/ Track</span>
+</div>
+<ul class="space-y-6 text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Professional Mixing</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Stereo Mastering</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 2 Rounds of Revision</li>
+</ul>
+</div>
+<button class="mt-16 w-full py-4 border border-outline-variant text-sm font-label tracking-widest hover:bg-surface-variant">BOOK NOW</button>
+</div>
+<!-- Tier 2 (Highlighted) -->
+<div class="bg-surface-container-high p-12 rounded-2xl border-2 border-primary relative transform scale-105 shadow-2xl flex flex-col justify-between">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 text-[10px] font-bold tracking-[0.2em] rounded-full">MOST POPULAR</div>
+<div>
+<h3 class="font-headline text-2xl mb-8">EP Anthology</h3>
+<div class="flex items-baseline gap-2 mb-12">
+<span class="text-4xl font-headline text-primary">$1,899</span>
+<span class="text-sm text-on-surface-variant">/ 4 Tracks</span>
+</div>
+<ul class="space-y-6 text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Full Production Support</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Dolby Atmos Mastering</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Project File Delivery</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Artist Marketing Kit</li>
+</ul>
+</div>
+<button class="mt-16 w-full py-4 metallic-gradient text-on-primary font-bold text-sm tracking-widest shadow-lg shadow-primary/20">RESERVE EP SLOT</button>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-container p-12 rounded-2xl border border-outline-variant/10 hover:border-tertiary/40 transition-colors duration-500 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl mb-8">Album Monolith</h3>
+<div class="flex items-baseline gap-2 mb-12">
+<span class="text-4xl font-headline text-primary">Custom</span>
+<span class="text-sm text-on-surface-variant">/ Full Project</span>
+</div>
+<ul class="space-y-6 text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Dedicated Project Manager</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> On-site Studio Residence</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Global Distribution Prep</li>
+</ul>
+</div>
+<button class="mt-16 w-full py-4 border border-outline-variant text-sm font-label tracking-widest hover:bg-surface-variant">INQUIRE</button>
+</div>
+</div>
+</section>
+<!-- Visualizer / Atmosphere Section -->
+<section class="h-[614px] relative overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 flex items-center justify-center opacity-40">
+<div class="flex items-end gap-1 h-32">
+<div class="w-1 bg-tertiary h-12"></div>
+<div class="w-1 bg-tertiary h-24"></div>
+<div class="w-1 bg-tertiary h-16"></div>
+<div class="w-1 bg-tertiary h-32"></div>
+<div class="w-1 bg-tertiary h-20"></div>
+<div class="w-1 bg-tertiary h-28"></div>
+<div class="w-1 bg-tertiary h-14"></div>
+<div class="w-1 bg-tertiary h-32"></div>
+<div class="w-1 bg-tertiary h-18"></div>
+<div class="w-1 bg-tertiary h-26"></div>
+<div class="w-1 bg-tertiary h-12"></div>
+<div class="w-1 bg-tertiary h-24"></div>
+<div class="w-1 bg-tertiary h-16"></div>
+<div class="w-1 bg-tertiary h-32"></div>
+<div class="w-1 bg-tertiary h-20"></div>
+<div class="w-1 bg-tertiary h-28"></div>
+<div class="w-1 bg-tertiary h-14"></div>
+<div class="w-1 bg-tertiary h-32"></div>
+</div>
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+<h2 class="font-headline text-4xl mb-6">聽見不可能。<br/><span class="text-secondary italic">Hear the Impossible.</span></h2>
+<p class="text-on-surface-variant max-w-lg mb-8">透過我們的音頻工程，讓您的創作跨越維度，直接觸及聽眾的心靈深處。</p>
+<div class="w-px h-24 bg-gradient-to-t from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#121315] w-full border-t border-[#4D4635]/15">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-[1920px] mx-auto">
+<div class="md:col-span-1">
+<div class="text-lg font-serif text-[#F2CA50] mb-8">WTM STUDIO</div>
+<p class="text-[0.75rem] text-gray-500 font-['Inter'] leading-relaxed">
+                    以聲音為名，築起永恆的紀念碑。<br/>
+                    Crafting audio legacies for the digital age.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-white">Navigate</h4>
+<ul class="space-y-2 text-[0.75rem] text-gray-500 uppercase tracking-[0.1em]">
+<li><a class="hover:text-white transition-colors" href="#">Sitemap</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Legal</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-white">Connect</h4>
+<ul class="space-y-2 text-[0.75rem] text-gray-500 uppercase tracking-[0.1em]">
+<li><a class="hover:text-[#D49CFF] transition-colors duration-300" href="#">SoundCloud</a></li>
+<li><a class="hover:text-[#D49CFF] transition-colors duration-300" href="#">Spotify</a></li>
+<li><a class="hover:text-[#D49CFF] transition-colors duration-300" href="#">Instagram</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-white">Journal</h4>
+<p class="text-[0.75rem] text-gray-500">Subscribe for sonic insights and studio updates.</p>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none border-b border-outline-variant/30 text-[0.75rem] py-2 focus:ring-0 focus:border-primary transition-colors" placeholder="YOUR@EMAIL.COM" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary font-bold text-xs tracking-widest">SEND</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-outline-variant/10 text-center">
+<p class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500">© 2024 WTM STUDIO. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>

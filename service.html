@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#00f1fe",
+                    "on-error": "#690005",
+                    "on-secondary": "#00363a",
+                    "surface-container-lowest": "#0d0e10",
+                    "primary-fixed-dim": "#e9c349",
+                    "outline-variant": "#4d4635",
+                    "surface-container-low": "#1b1c1e",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "on-tertiary-container": "#6a00aa",
+                    "primary-fixed": "#ffe088",
+                    "surface-tint": "#e9c349",
+                    "background": "#121315",
+                    "tertiary-container": "#d49cff",
+                    "error": "#ffb4ab",
+                    "primary": "#f2ca50",
+                    "on-primary": "#3c2f00",
+                    "primary-container": "#d4af37",
+                    "on-tertiary-fixed": "#2e004e",
+                    "on-background": "#e3e2e5",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-variant": "#343537",
+                    "on-primary-fixed-variant": "#574500",
+                    "secondary": "#ddfcff",
+                    "tertiary": "#e6c1ff",
+                    "inverse-primary": "#735c00",
+                    "surface": "#121315",
+                    "surface-bright": "#38393b",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002022",
+                    "tertiary-fixed": "#f2daff",
+                    "on-tertiary-fixed-variant": "#6c00ae",
+                    "on-surface": "#e3e2e5",
+                    "inverse-on-surface": "#303033",
+                    "on-secondary-container": "#006a70",
+                    "secondary-fixed": "#74f5ff",
+                    "tertiary-fixed-dim": "#e1b6ff",
+                    "surface-container-highest": "#343537",
+                    "surface-dim": "#121315",
+                    "inverse-surface": "#e3e2e5",
+                    "outline": "#99907c",
+                    "on-tertiary": "#4c007c",
+                    "on-primary-container": "#554300",
+                    "secondary-fixed-dim": "#00dbe7",
+                    "surface-container": "#1f2022",
+                    "surface-container-high": "#292a2c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif TC"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #121315; color: #e3e2e5; }
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(18, 19, 21, 0.6); backdrop-filter: blur(24px); }
+        .metallic-gradient { background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%); }
+    </style>
+</head>
+<body class="selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#121315]/60 backdrop-blur-xl transition-all duration-500 shadow-2xl shadow-black/40">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#F2CA50] font-serif-tc">WTM STUDIO</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-[#F2CA50] border-b-2 border-[#F2CA50] pb-1 font-['Noto_Serif_TC'] tracking-[0.05em]" href="#">Services</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 font-['Noto_Serif_TC'] tracking-[0.05em]" href="#">Solutions</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 font-['Noto_Serif_TC'] tracking-[0.05em]" href="#">Artists</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 font-['Noto_Serif_TC'] tracking-[0.05em]" href="#">Pricing</a>
+<a class="text-gray-400 hover:text-[#00F1FE] transition-colors duration-300 font-['Noto_Serif_TC'] tracking-[0.05em]" href="#">FAQ</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:scale-105 transition-transform">account_circle</button>
+<button class="metallic-gradient text-on-primary px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/20">
+                    Book Session
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section: Service Focus -->
+<section class="px-12 mb-32 max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<div class="label-md text-secondary-container tracking-[0.2em] mb-6 font-bold uppercase">Ultimate Sound Precision</div>
+<h1 class="text-[5rem] font-serif-tc leading-[1.1] mb-8 text-on-surface tracking-tighter">
+                    塑造音訊的<br/><span class="text-primary italic">極致秩序</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+                    我們提供最透明、最高效率的專業混音與母帶處理服務。透過自動化預約系統與即時雲端校正工具，讓藝術創作與技術執行無縫接軌。
+                </p>
+<div class="flex space-x-6">
+<button class="metallic-gradient text-on-primary px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all">
+                        立即預約時段
+                    </button>
+<button class="border border-outline-variant px-10 py-5 rounded-full font-bold text-on-surface hover:bg-surface-container-high transition-all">
+                        瀏覽服務清單
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 h-[600px] rounded-3xl overflow-hidden relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="professional high-end music studio desk with minimalist monitors and warm ambient acoustic paneling in deep charcoal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrT_cM2Yr_6XZbCSvxnkQK9_9jy3MkVWDYE0-xdY6ruW_MmGXa5vVMJfHudZYLyZWdIDakZkNx1-i_mFoafbIobACSSOE4MmyTt5V8PahslIGDDGpyULJxf02Sa_XDKQk4DxWagE4ru4gg1KMXVY-B93UeETHgpaS6fh917xoxmkNFOUti-XdyoUk3yC_pf43gok6gDW7iBxloLNunCre9Eox5JhWD81uNEWJ-zMFtl3Uw7vpTro91zFw4iNVhxA4pCYt9ykPZHA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-2xl border border-white/5">
+<div class="flex justify-between items-center">
+<div>
+<div class="text-xs text-secondary-container font-bold tracking-widest uppercase mb-1">Status</div>
+<div class="text-xl font-serif-tc">Studio A: Online</div>
+</div>
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-background bg-primary flex items-center justify-center text-on-primary text-xs font-bold">JD</div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-on-secondary text-xs font-bold">MK</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Bento Grid -->
+<section class="px-12 mb-40 max-w-[1920px] mx-auto">
+<h2 class="text-3xl font-serif-tc mb-16 text-on-surface border-l-4 border-primary pl-8">技術與服務流程 <span class="text-secondary-container font-sans text-lg ml-4">/ WORKFLOW</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-surface-container-low p-10 rounded-3xl group hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-primary mb-8">cloud_upload</span>
+<h3 class="text-2xl font-serif-tc mb-4">智能文件提交系統</h3>
+<p class="text-on-surface-variant leading-relaxed">支援最高 192kHz/32-bit 浮點運算格式。自動校驗相位、DC 偏移與元數據，確保源頭素材的完美性。</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-3xl group hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-8">monitoring</span>
+<h3 class="text-2xl font-serif-tc mb-4">實時校核</h3>
+<p class="text-on-surface-variant leading-relaxed">雲端串流無損預覽，讓您即時給予反饋。</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-3xl group hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-tertiary-container mb-8">history</span>
+<h3 class="text-2xl font-serif-tc mb-4">版本控管</h3>
+<p class="text-on-surface-variant leading-relaxed">永久保存專案歷史版本，隨時回溯。</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-3xl group hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-primary mb-8">bolt</span>
+<h3 class="text-2xl font-serif-tc mb-4">24H 快速產出</h3>
+<p class="text-on-surface-variant leading-relaxed">專為急件設計，當日提交翌日交付。</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-low p-10 rounded-3xl group hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-2xl font-serif-tc mb-4">Hybrid Analog/Digital Chain</h3>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">結合經典真空管硬體與頂尖數位插件，提供溫暖且極具現代感的聲音質地。每一條聲道都經過獨立訊號路徑精密校準。</p>
+</div>
+<div class="absolute right-0 bottom-0 top-0 w-1/2 opacity-20 group-hover:opacity-40 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="close up of vintage audio compressor knobs with soft yellow backlighting in a dark professional studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6OUhxV4ufNFb558EVn2izuq1oQCz6i3sz8rR6wRaZbo4SAHSY1GBN1LlUSG37-slSLImV61ej2kYpbpNmrBfxeNiKmiwMtKDK-CbXjew7Mrv1t6w7hzMwEqbxfdSKuWrigNnB4XoMSPqYCkDmSNB_CWIiGLj8cZ5ZUo3PgaH64FOAVIQvheVdcOz1Zvr9pXb8odXAqnSKOypjPr7HvhuDksevY3b-dl0G5l6-qCeq7XMeVHscp7YgOlu8WcDh_G-XExh16uCJrA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Tiers: Efficiency Focused -->
+<section class="bg-surface-container-lowest py-32 px-12">
+<div class="max-w-[1920px] mx-auto text-center mb-24">
+<h2 class="text-5xl font-serif-tc mb-6">透明化的定價體系</h2>
+<p class="text-on-surface-variant">拒絕隱藏費用，專注於音訊服務的技術價值。</p>
+</div>
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Single Service -->
+<div class="bg-surface p-12 rounded-3xl border border-outline-variant/10 hover:border-primary/50 transition-all flex flex-col">
+<div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Single Project</div>
+<h3 class="text-3xl font-serif-tc mb-8">單曲後製</h3>
+<div class="text-5xl font-bold text-primary mb-10">$1,200<span class="text-sm font-normal text-on-surface-variant ml-2">/ Track</span></div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 專業混音與母帶處理</li>
+<li class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 兩次細節修訂</li>
+<li class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 數位格式交付</li>
+</ul>
+<button class="w-full py-4 rounded-full border border-outline-variant hover:bg-surface-container-high transition-all">立即開始</button>
+</div>
+<!-- Premium Bundle -->
+<div class="bg-surface-container-high p-12 rounded-3xl border-2 border-primary relative transform scale-105 shadow-2xl shadow-primary/10 flex flex-col">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 metallic-gradient text-on-primary px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter">Most Popular</div>
+<div class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Album Package</div>
+<h3 class="text-3xl font-serif-tc mb-8">全專輯製作</h3>
+<div class="text-5xl font-bold text-primary mb-10">$8,500<span class="text-sm font-normal text-on-surface-variant ml-2">/ 10 Tracks</span></div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 全曲目音色一致性校準</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 無限制小幅修訂</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 提供 STEMS 分軌</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-primary text-sm mr-2">check_circle</span> 包含實體黑膠/CD 專用母帶</li>
+</ul>
+<button class="w-full py-4 rounded-full metallic-gradient text-on-primary font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all">優先預約</button>
+</div>
+<!-- Enterprise -->
+<div class="bg-surface p-12 rounded-3xl border border-outline-variant/10 hover:border-secondary-container/50 transition-all flex flex-col">
+<div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Studio Rental</div>
+<h3 class="text-3xl font-serif-tc mb-8">時段租賃</h3>
+<div class="text-5xl font-bold text-secondary-container mb-10">$150<span class="text-sm font-normal text-on-surface-variant ml-2">/ Hour</span></div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-sm mr-2">check_circle</span> Studio A 獨立空間</li>
+<li class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-sm mr-2">check_circle</span> 包含駐場工程師協助</li>
+<li class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-sm mr-2">check_circle</span> 全設備免費使用</li>
+</ul>
+<button class="w-full py-4 rounded-full border border-outline-variant hover:bg-surface-container-high transition-all">查詢時段</button>
+</div>
+</div>
+</section>
+<!-- Solutions/Case Study Cards -->
+<section class="px-12 py-40 max-w-[1920px] mx-auto">
+<div class="flex justify-between items-end mb-20">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-serif-tc mb-6">解決方案與案例實績</h2>
+<p class="text-on-surface-variant">我們為不同領域的音訊需求提供針對性的專業處理方案。</p>
+</div>
+<button class="text-secondary-container font-bold flex items-center hover:translate-x-2 transition-transform">
+                    VIEW ALL CASES <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="group cursor-pointer">
+<div class="aspect-[16/9] rounded-3xl overflow-hidden mb-8 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern podcast studio with multiple high-end microphones and warm lighting in a soundproofed room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVWRmQD_nUlLD4u6OslGI6IgmlIWVKv2Ag79ZsrdbcQ09-zBQjwoiTWFzAeuRcLAxt65rhjbcJBqxYvhKOv1fv3E2L0kBTtmll9AZxjvimIqcuCoDqbNtp7FtszKnFoLD14rWoJ4YvO90pqAhRKj63k-Ty-xvnkzM0Ool6thWZg3X2-hsigOn3jq1YCUq06EV6ozEuJC6GMSTdzJsdmovRmYAI2zEb7SRjb1I8f--6A9ZGWE7TyAZ3ta3XYgi-RUXznQMbapoN0A"/>
+<div class="absolute top-6 left-6 bg-surface/80 backdrop-blur px-4 py-2 rounded-full text-xs font-bold">COMMERCIAL</div>
+</div>
+<h3 class="text-3xl font-serif-tc mb-4">Podcast 與有聲書後製</h3>
+<p class="text-on-surface-variant leading-relaxed">精準消除環境噪音與齒音，提升語音清晰度，為聽眾打造零壓力的沉浸式聆聽體驗。</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[16/9] rounded-3xl overflow-hidden mb-8 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="professional dj mixer in a dark nightclub with blue and purple neon light flares" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPw4p6g2dttPYiKcAcMdas_aRb7Hash6DJnZvqBLL-ysBkgvHJCgNsie08DHXY-brAtkl9B3qLB2DTFuVHlsSXiO_idfmNPauId5ElerTP4EHRWjkabcVZDpmHy9xPpRwmdqVjtFTmeXkH2J49MNEzQ2hzy2bLPnazE-eCt19Wx6B76nfP4zxC3XNbnffK735zwDmxwcL22n_5A183iC3kJ7yaNleTiUGD5bcqAoXobduuLFIRvagUdMbdy9ga-jITZOuhbRRqHg"/>
+<div class="absolute top-6 left-6 bg-surface/80 backdrop-blur px-4 py-2 rounded-full text-xs font-bold">ELECTRONIC MUSIC</div>
+</div>
+<h3 class="text-3xl font-serif-tc mb-4">EDM 舞曲動態優化</h3>
+<p class="text-on-surface-variant leading-relaxed">強化低頻衝擊力與高頻通透感，確保您的音樂在任何音響系統中都能釋放最強能量。</p>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-12 pb-40">
+<div class="max-w-6xl mx-auto rounded-[3rem] bg-gradient-to-br from-surface-container-high to-surface-container-low p-20 relative overflow-hidden border border-white/5">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary-container/10 blur-[120px] rounded-full -ml-48 -mb-48"></div>
+<div class="relative z-10 text-center">
+<h2 class="text-4xl font-serif-tc mb-6">準備好開始您的下一個企劃了嗎？</h2>
+<p class="text-on-surface-variant mb-12 max-w-xl mx-auto">加入我們的專屬通知名單，獲取最新的音訊處理技術文章與限時優惠資訊。</p>
+<div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-grow bg-surface-container-lowest border-none rounded-full px-8 py-4 focus:ring-2 focus:ring-secondary-container text-on-surface" placeholder="您的電子郵件地址" type="email"/>
+<button class="bg-secondary-container text-on-secondary px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">立即訂閱</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#121315] w-full border-t border-[#4D4635]/15">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-[1920px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-serif text-[#F2CA50] mb-8">WTM STUDIO</div>
+<p class="text-gray-500 text-sm leading-relaxed mb-8">致力於為全球藝術家提供最頂尖的音訊解決方案。我們不只是技術提供者，更是您的創作夥伴。</p>
+<div class="flex space-x-4">
+<a class="text-gray-500 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">equalizer</span></a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">graphic_eq</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white text-xs font-black uppercase tracking-widest mb-8">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Mixing &amp; Mastering</a></li>
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Sound Design</a></li>
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Studio Rental</a></li>
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Consultation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white text-xs font-black uppercase tracking-widest mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Sitemap</a></li>
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Legal</a></li>
+<li><a class="text-gray-500 hover:text-white transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white text-xs font-black uppercase tracking-widest mb-8">Social</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 hover:text-[#D49CFF] transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">SoundCloud</a></li>
+<li><a class="text-gray-500 hover:text-[#D49CFF] transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Spotify</a></li>
+<li><a class="text-gray-500 hover:text-[#D49CFF] transition-colors font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em]" href="#">Instagram</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-10 border-t border-outline-variant/10 text-center">
+<div class="font-['Inter'] text-[0.75rem] uppercase tracking-[0.1em] text-gray-500">© 2024 WTM STUDIO. ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+</body></html>
